@@ -145,7 +145,7 @@ int detectSURFPoints(const ImgG& img, Mat_d& surfPts,
 
 	KpVec surfPtsVec;
 	//cv::SURF surf(hessianThreshold, 4, 2, false);
-	cv::ORB surf();
+	cv::ORB surf;
 	cv::Mat cvImg(img.rows, img.cols, CV_8UC1, img.data);
 	surf(cvImg, cv::Mat(), surfPtsVec, surfDesc);
 	KpVec2Mat(surfPtsVec, surfPts);
